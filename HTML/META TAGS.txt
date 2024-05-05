@@ -1,0 +1,17 @@
+<!DOCTYPE html> – This is the document type declaration (not technically a tag). It declares a document as being an HTML document. The doctype declaration is not case-sensitive.
+
+<html> – This is called the HTML root element. All other elements are contained within it.
+
+<head> – The head tag contains the “behind the scenes” elements for a webpage. Elements within the head aren’t visible on the front end of a webpage. HTML elements used inside the <head> element include: 
+
+<style> – This HTML tag allows us to insert styling into our web pages and make them appealing to look at with the help of CSS.
+
+<title> – The title is what is displayed on the top of your browser when you visit a website and contains the title of the webpage that you are viewing.
+
+<script> – This tag is used to add functionality to the website with the help of JavaScript.
+
+<meta> – This tag encloses the metadata of the website that must be loaded every time the website is visited. For eg:- the metadata charset allows you to use the standard UTF-8 encoding on your website. This in turn allows the users to view your webpage in the language of their choice. It is a self-closing tag.
+
+<link> – The ‘link’ tag is used to tie together HTML, CSS, and JavaScript. It is self-closing.
+
+<body> – The body tag is used to enclose all the visible content of a webpage. In other words, the body content is what the browser will show on the front end.
