@@ -1,1 +1,3 @@
-https://gupta-veer-rishabh.github.io/Counter/index.html
+https://code-clan-community.github.io/Counter/
+
+

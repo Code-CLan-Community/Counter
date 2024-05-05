@@ -27,7 +27,7 @@
 
     body {
       align-items: center;
-      background:linear-gradient(to left, #70e1f5, #ffd194);
+      background:linear-gradient(to bottom right, #70e1f5, #ffd194);
       display: flex;
       font-family: -apple-system,
         BlinkMacSystemFont,
@@ -103,7 +103,7 @@
         <li><span id="minutes"></span>Minutes</li>
         <li><span id="seconds"></span>Seconds</li>
       </ul>
-    </div>
+    </div> 
     <div id="content" class="emoji">
       <span>🥳</span>
       <span>🎉</span>
@@ -137,7 +137,7 @@
 
           // Do something when the time is reached
           if (distance < 0) {
-            document.getElementById("headline").innerText = "Get Ready For Session";
+            document.getElementById("headline").innerText = "Get Ready For Session <br> Joining Link: https://meet.google.com/zuc-mfad-uhq";
             document.getElementById("countdown").style.display = "none";
             document.getElementById("content").style.display = "block";
             clearInterval(x);
