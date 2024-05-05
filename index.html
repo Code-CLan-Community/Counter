@@ -27,7 +27,7 @@
 
     body {
       align-items: center;
-      background-color: #ffd54f;
+      background:linear-gradient(to left, #70e1f5, #ffd194);
       display: flex;
       font-family: -apple-system,
         BlinkMacSystemFont,
@@ -97,7 +97,7 @@
   <div class="container">
     <h1 id="headline">Countdown to Start The Session</h1>
     <div id="countdown">
-      <ul>
+      <ul> 
         <li><span id="days"></span>days</li>
         <li><span id="hours"></span>Hours</li>
         <li><span id="minutes"></span>Minutes</li>
@@ -137,7 +137,7 @@
 
           // Do something when the time is reached
           if (distance < 0) {
-            document.getElementById("headline").innerText = "Get Ready For Session!";
+            document.getElementById("headline").innerText = "Get Ready For Session";
             document.getElementById("countdown").style.display = "none";
             document.getElementById("content").style.display = "block";
             clearInterval(x);
