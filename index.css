@@ -1,0 +1,114 @@
+:root {
+    --smaller: .75;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background:url(https://i.pinimg.com/564x/f1/4f/8c/f14f8c244b13f4274b25b4f026740035.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    /* display: flex; */
+    font-family:cursive
+  }
+  .overlay
+  {
+    width: 100%;
+    height: 100%;
+    z-index: 16;
+    background-color: hsla(0, 0%, 0%, 0.402);
+   
+  }
+  #countdown{
+    width: 80%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+  }
+  #content{
+    width: 80%;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+#joinButton{
+  position: relative;
+ 
+
+  padding: 20px 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color:rgba(216, 249, 249, 0.42);
+  font-size: 30px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+  #headline, #timer {
+    font-weight: normal;
+    font-size: 36px;
+    line-height: -30px;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    color: aliceblue;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+
+  .emoji {
+    display: none;
+    padding: 1rem;
+  }
+
+  .emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+  }
+  
+
+  #headline {
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff; /* Change the font color if needed */
+    margin-bottom: 20px; /* Add some margin at the bottom */
+    text-align: center;
+  }
+
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+  }
+
+ 
