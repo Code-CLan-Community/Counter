@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Style.css">
-  <!-- <link rel="stylesheet" href="Index.js"> -->
-  <title>Intro To Web Dev</title>
-
+  <title>Countdown Timer</title>
   <style>
+    /* Add your CSS styles here */
     :root {
       --smaller: .75;
     }
@@ -22,34 +19,57 @@
     html,
     body {
       height: 100%;
-      margin: 0;
-    }
-
-    body {
+      width: 100%;
       align-items: center;
-      background:linear-gradient(to bottom right, #70e1f5, #ffd194);
-      display: flex;
-      font-family: -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Oxygen-Sans,
-        Ubuntu,
-        Cantarell,
-        "Helvetica Neue",
-        sans-serif;
-    }
-
-    .container {
-      color: #333;
-      margin: 0 auto;
       text-align: center;
+      background:url(https://i.pinimg.com/564x/f1/4f/8c/f14f8c244b13f4274b25b4f026740035.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 30%;
+      /* display: flex; */
+      font-family:cursive
     }
+    .overlay
+    {
+      width: 100%;
+      height: 100%;
+      z-index: 16;
+      background-color: hsla(0, 0%, 0%, 0.402);
+     
+    }
+    #countdown{
+      width: 80%;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      
+      transform: translate(-50%, -50%);
+    }
+    #content{
+      width: 80%;
+      position: absolute;
+      top: 32%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  #joinButton{
+    position: relative;
+   
 
-    h1 {
+    padding: 20px 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:rgba(216, 249, 249, 0.42);
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+    #headline, #timer {
       font-weight: normal;
+      font-size: 36px;
+      line-height: -30px;
       letter-spacing: .125rem;
       text-transform: uppercase;
+      color: aliceblue;
     }
 
     li {
@@ -74,6 +94,16 @@
       font-size: 4rem;
       padding: 0 .5rem;
     }
+    
+
+    #headline {
+      font-size: 2.5rem; /* Adjust the font size as needed */
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff; /* Change the font color if needed */
+      margin-bottom: 20px; /* Add some margin at the bottom */
+      text-align: center;
+    }
 
     @media all and (max-width: 768px) {
       h1 {
@@ -88,29 +118,27 @@
         font-size: calc(3.375rem * var(--smaller));
       }
     }
+
+    
   </style>
-
-
 </head>
-
 <body>
-  <div class="container">
-    <h1 id="headline">Countdown to Start The Session</h1>
-    <div id="countdown">
-      <ul> 
-        <li><span id="days"></span>days</li>
-        <li><span id="hours"></span>Hours</li>
-        <li><span id="minutes"></span>Minutes</li>
-        <li><span id="seconds"></span>Seconds</li>
-      </ul>
-    </div> 
-    <div id="content" class="emoji">
-      <span>🥳</span>
-      <span>🎉</span>
-      <span>🎂</span>
+ <div class="overlay">
+  <div id="countdown">
+    <p id="headline">Countdown to Session:</p>
+    <div id="timer">
+      <span id="days"></span> Days
+      <span id="hours"></span> Hours
+      <span id="minutes"></span> Minutes
+      <span id="seconds"></span> Seconds
     </div>
   </div>
+ </div>
+  <div id="content" style="display: none;">
+    <!-- Additional content to display after the countdown ends -->
 
+    <button id="joinButton" onclick="joinSession()">Click Me For Joining The Workshop</button>
+  </div>
 
   <script>
     (function () {
@@ -119,11 +147,11 @@
         hour = minute * 60,
         day = hour * 24;
 
-      // Set today's date and time to 8 PM
+      // Set today's date and time to 7:30 PM
       let today = new Date();
-      today.setHours(20, 0, 0, 0); // 20 is 8 PM in 24-hour format
+      today.setHours(13, 42, 0, 0); // 19 is 7 PM and 30 is 30 minutes in 24-hour format
 
-      // Calculate the time until today at 8 PM
+      // Calculate the time until today at 7:30 PM
       const countDown = today.getTime(),
         x = setInterval(function () {
 
@@ -137,15 +165,24 @@
 
           // Do something when the time is reached
           if (distance < 0) {
-            document.getElementById("headline").innerText = "Get Ready For Session <br> Joining Link: https://meet.google.com/zuc-mfad-uhq";
+            document.getElementById("headline").innerText = "Get Ready For Session";
             document.getElementById("countdown").style.display = "none";
             document.getElementById("content").style.display = "block";
             clearInterval(x);
+
+            // Enable the join button and style it
+            document.getElementById("joinButton").disabled = false;
+            // document.getElementById("joinButton").style.backgroundColor = "green";
+            document.getElementById("joinButton").style.color = "white";
           }
         }, 1000); // Update every second
     })();
 
+    // Function to handle joining the session
+    function joinSession() {
+      // Redirect to the joining link
+      window.location.href = "https://meet.google.com/ffb-ooeh-qei";
+    }
   </script>
 </body>
-
 </html>
