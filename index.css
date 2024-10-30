@@ -101,10 +101,20 @@
   }
   .note{font-size: 20px;}
 
+  @media only screen and (min-width: 450px) {
+    body{
+    background-position-x: 50%;
+  }
+}
+
   @media all and (max-width: 768px) {
+    
+    
     #countdown{
+
       background-repeat: no-repeat;
       background-size:contain ;
+      
     }
     h1 {
       font-size: calc(1.5rem * var(--smaller));
